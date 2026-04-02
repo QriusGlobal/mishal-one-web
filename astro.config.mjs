@@ -1,0 +1,67 @@
+import sitemap from '@astrojs/sitemap';
+import tailwind from '@astrojs/tailwind';
+import compress from 'astro-compress';
+import icon from 'astro-icon';
+import { defineConfig } from 'astro/config';
+import { fileURLToPath } from 'url';
+
+// https://astro.build/config
+export default defineConfig({
+  site: 'https://mishal.one',
+  output: 'static',
+  image: {
+    service: {
+      entrypoint: 'astro/assets/services/sharp',
+    },
+  },
+  integrations: [
+    tailwind(),
+    compress({
+      CSS: {
+        csso: { restructure: true, forceMediaMerge: true, comments: false },
+      },
+      HTML: {
+        'html-minifier-terser': {
+          removeComments: true,
+          collapseWhitespace: true,
+          minifyCSS: true,
+          minifyJS: true,
+        },
+      },
+      JavaScript: {
+        terser: {
+          compress: { drop_console: true, drop_debugger: true },
+          format: { comments: false },
+        },
+      },
+      SVG: {
+        svgo: {
+          plugins: [
+            {
+              name: 'preset-default',
+              params: { overrides: { removeViewBox: false, removeTitle: false } },
+            },
+          ],
+        },
+      },
+      Image: false,
+    }),
+    sitemap(),
+    icon({
+      svgoOptions: {
+        plugins: [
+          'preset-default',
+          { name: 'convertColors', params: { currentColor: true } },
+        ],
+      },
+    }),
+  ],
+  server: { port: 4322, host: true },
+  vite: {
+    resolve: {
+      alias: {
+        '@/': fileURLToPath(new URL('./src/', import.meta.url)),
+      },
+    },
+  },
+});

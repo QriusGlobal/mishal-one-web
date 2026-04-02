@@ -1,0 +1,30 @@
+# Dependencies
+node_modules/
+bun.lockb
+
+# Build output
+dist/
+.astro/
+
+# Environment
+.env
+.env.*
+.dev.vars
+
+# Wrangler
+.wrangler/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp
+
+# IBR reference project build artifacts
+ibr-web/dist/
+ibr-web/node_modules/
+ibr-web/.astro/
+ibr-web/.wrangler/

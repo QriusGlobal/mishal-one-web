@@ -1,0 +1,165 @@
+/**
+ * Material Design 3 Design Tokens — Placeholder Neutral Palette
+ *
+ * CUSTOMIZE: Replace these CSS custom properties with your brand colors.
+ * The token names are stable — components reference them via var().
+ * Swap the values, keep the names.
+ *
+ * Token Hierarchy:
+ * 1. Reference Tokens (--md-ref-*) — Raw color values
+ * 2. System Tokens (--md-sys-*) — Semantic roles
+ * 3. Component Tokens — Applied by components
+ */
+
+:root {
+  /* ===== Reference Tokens — Primary Palette (Neutral placeholder) ===== */
+  --md-ref-palette-primary-0: #000000;
+  --md-ref-palette-primary-10: #1a1a1a;
+  --md-ref-palette-primary-20: #2e2e2e;
+  --md-ref-palette-primary-30: #444444;
+  --md-ref-palette-primary-40: #5a5a5a;
+  --md-ref-palette-primary-50: #737373;
+  --md-ref-palette-primary-60: #8c8c8c;
+  --md-ref-palette-primary-70: #a6a6a6;
+  --md-ref-palette-primary-80: #bfbfbf;
+  --md-ref-palette-primary-90: #d9d9d9;
+  --md-ref-palette-primary-95: #ececec;
+  --md-ref-palette-primary-99: #fafafa;
+  --md-ref-palette-primary-100: #ffffff;
+
+  /* ===== Reference Tokens — Neutral Palette ===== */
+  --md-ref-palette-neutral-0: #000000;
+  --md-ref-palette-neutral-10: #1a1a1a;
+  --md-ref-palette-neutral-20: #333333;
+  --md-ref-palette-neutral-30: #4d4d4d;
+  --md-ref-palette-neutral-40: #666666;
+  --md-ref-palette-neutral-50: #808080;
+  --md-ref-palette-neutral-60: #999999;
+  --md-ref-palette-neutral-70: #b3b3b3;
+  --md-ref-palette-neutral-80: #cccccc;
+  --md-ref-palette-neutral-90: #e5e5e5;
+  --md-ref-palette-neutral-95: #f2f2f2;
+  --md-ref-palette-neutral-99: #fafafa;
+  --md-ref-palette-neutral-100: #ffffff;
+
+  /* ===== Reference Tokens — Typography ===== */
+  --md-ref-typeface-brand: 'Inter Variable', system-ui, sans-serif;
+  --md-ref-typeface-plain: system-ui, sans-serif;
+
+  /* ===== System Tokens — Color (Light Theme) ===== */
+  --md-sys-color-primary: #1a1a1a;
+  --md-sys-color-on-primary: #ffffff;
+  --md-sys-color-primary-container: #f2f2f2;
+  --md-sys-color-on-primary-container: #1a1a1a;
+  --md-sys-color-primary-mid: #444444;
+
+  --md-sys-color-secondary: #666666;
+  --md-sys-color-on-secondary: #ffffff;
+  --md-sys-color-secondary-container: #e5e5e5;
+  --md-sys-color-on-secondary-container: #1a1a1a;
+
+  --md-sys-color-tertiary: #4d4d4d;
+  --md-sys-color-on-tertiary: #ffffff;
+  --md-sys-color-tertiary-container: #e5e5e5;
+  --md-sys-color-on-tertiary-container: #1a1a1a;
+  --md-sys-color-tertiary-mid: #666666;
+
+  --md-sys-color-error: #dc2626;
+  --md-sys-color-on-error: #ffffff;
+  --md-sys-color-error-container: #fef2f2;
+  --md-sys-color-on-error-container: #7f1d1d;
+
+  --md-sys-color-background: #fafafa;
+  --md-sys-color-on-background: #1a1a1a;
+
+  --md-sys-color-surface: #ffffff;
+  --md-sys-color-on-surface: #1a1a1a;
+  --md-sys-color-surface-variant: #f5f5f5;
+  --md-sys-color-on-surface-variant: #404040;
+  --md-sys-color-surface-dark: #171717;
+  --md-sys-color-on-surface-dark: #fafafa;
+
+  --md-sys-color-outline: #737373;
+  --md-sys-color-outline-variant: #d4d4d4;
+
+  --md-sys-color-surface-container-lowest: #ffffff;
+  --md-sys-color-surface-container-low: #fafafa;
+  --md-sys-color-surface-container: #f5f5f5;
+  --md-sys-color-surface-container-high: #e5e5e5;
+  --md-sys-color-surface-container-highest: #d4d4d4;
+
+  /* ===== System Tokens — Shape ===== */
+  --md-sys-shape-corner-none: 0px;
+  --md-sys-shape-corner-extra-small: 4px;
+  --md-sys-shape-corner-small: 8px;
+  --md-sys-shape-corner-medium: 12px;
+  --md-sys-shape-corner-large: 16px;
+  --md-sys-shape-corner-extra-large: 28px;
+  --md-sys-shape-corner-full: 9999px;
+
+  /* ===== Component Tokens — Brand ===== */
+  --brand-body-background: var(--md-sys-color-background);
+
+  /* ===== Animation Design Tokens ===== */
+  --animation-fast: 200ms;
+  --animation-normal: 300ms;
+  --animation-slow: 500ms;
+  --ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ===== Dark Theme ===== */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --md-sys-color-primary: #e5e5e5;
+    --md-sys-color-on-primary: #1a1a1a;
+    --md-sys-color-primary-container: #333333;
+    --md-sys-color-on-primary-container: #e5e5e5;
+    --md-sys-color-primary-mid: #999999;
+
+    --md-sys-color-secondary: #b3b3b3;
+    --md-sys-color-on-secondary: #1a1a1a;
+    --md-sys-color-secondary-container: #404040;
+    --md-sys-color-on-secondary-container: #e5e5e5;
+
+    --md-sys-color-tertiary: #999999;
+    --md-sys-color-on-tertiary: #1a1a1a;
+    --md-sys-color-tertiary-container: #404040;
+    --md-sys-color-on-tertiary-container: #e5e5e5;
+    --md-sys-color-tertiary-mid: #808080;
+
+    --md-sys-color-error: #fca5a5;
+    --md-sys-color-on-error: #7f1d1d;
+    --md-sys-color-error-container: #991b1b;
+    --md-sys-color-on-error-container: #fef2f2;
+
+    --md-sys-color-background: #0a0a0a;
+    --md-sys-color-on-background: #e5e5e5;
+
+    --md-sys-color-surface: #171717;
+    --md-sys-color-on-surface: #e5e5e5;
+    --md-sys-color-surface-variant: #262626;
+    --md-sys-color-on-surface-variant: #a3a3a3;
+    --md-sys-color-surface-dark: #0a0a0a;
+    --md-sys-color-on-surface-dark: #d4d4d4;
+
+    --md-sys-color-outline: #737373;
+    --md-sys-color-outline-variant: #404040;
+
+    --md-sys-color-surface-container-lowest: #0a0a0a;
+    --md-sys-color-surface-container-low: #171717;
+    --md-sys-color-surface-container: #262626;
+    --md-sys-color-surface-container-high: #333333;
+    --md-sys-color-surface-container-highest: #404040;
+  }
+}
+
+/* ===== Accessibility ===== */
+:focus-visible {
+  outline: 2px solid var(--md-sys-color-primary);
+  outline-offset: 2px;
+}
+
+:focus:not(:focus-visible) {
+  outline: none;
+}
