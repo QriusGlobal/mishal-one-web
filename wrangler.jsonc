@@ -1,0 +1,25 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "mishal-one-web",
+  "pages_build_output_dir": "./dist",
+  "compatibility_date": "2026-04-02",
+
+  // Environment variables available to Pages Functions (if added later)
+  "vars": {
+    "ENVIRONMENT": "production"
+  },
+
+  // Preview environment overrides
+  "env": {
+    "preview": {
+      "vars": {
+        "ENVIRONMENT": "preview"
+      }
+    }
+  }
+
+  // Future bindings go here (KV, R2, D1, etc.):
+  // "kv_namespaces": [{ "binding": "KV", "id": "<NAMESPACE_ID>" }],
+  // "r2_buckets": [{ "binding": "ASSETS", "bucket_name": "<BUCKET>" }],
+  // "d1_databases": [{ "binding": "DB", "database_name": "<DB>", "database_id": "<ID>" }]
+}
