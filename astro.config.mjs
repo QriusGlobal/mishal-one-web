@@ -1,4 +1,4 @@
-import sitemap from '@astrojs/sitemap';
+// import sitemap from '@astrojs/sitemap'; // Uncomment when noindex is removed
 import tailwind from '@astrojs/tailwind';
 import compress from 'astro-compress';
 import icon from 'astro-icon';
@@ -46,7 +46,7 @@ export default defineConfig({
       },
       Image: false,
     }),
-    sitemap(),
+    // sitemap(), // Uncomment when noindex is removed
     icon({
       svgoOptions: {
         plugins: [

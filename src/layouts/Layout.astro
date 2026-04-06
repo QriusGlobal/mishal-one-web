@@ -1,24 +1,21 @@
 ---
-import { SEO } from 'astro-seo';
-import { SITE_NAME, SITE_URL, SITE_DESCRIPTION } from '../config';
-import { VERSION, BUILD_TIMESTAMP } from '../version';
-import '../styles/material-tokens.css';
+// import { SEO } from 'astro-seo';
+// import { SITE_NAME, SITE_URL, SITE_DESCRIPTION } from '../config';
+// import { VERSION, BUILD_TIMESTAMP } from '../version';
+// import '../styles/material-tokens.css';
 
-export interface Props {
-  title?: string;
-  description?: string;
-  image?: string;
-}
+// SEO and metadata commented out until branding is finalised.
+// Uncomment the above imports and the <SEO /> block below when ready.
 
-const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
+// export interface Props {
+//   title?: string;
+//   description?: string;
+//   image?: string;
+// }
 
-const {
-  title = SITE_NAME,
-  description = SITE_DESCRIPTION,
-  image = '/og-placeholder.png',
-} = Astro.props;
-
-const fullTitle = title === SITE_NAME ? title : `${title} — ${SITE_NAME}`;
+// const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
+// const { title = SITE_NAME, description = SITE_DESCRIPTION, image = '/og-placeholder.png' } = Astro.props;
+// const fullTitle = title === SITE_NAME ? title : `${title} — ${SITE_NAME}`;
 ---
 
 <!doctype html>
@@ -26,51 +23,27 @@ const fullTitle = title === SITE_NAME ? title : `${title} — ${SITE_NAME}`;
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>mishal.one</title>
+
+    <!-- SEO metadata — uncomment when branding is ready
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <meta name="version" content={VERSION} />
     <meta name="build-timestamp" content={BUILD_TIMESTAMP} />
     <link rel="canonical" href={canonicalURL} />
-
     <SEO
       title={fullTitle}
       description={description}
       openGraph={{
-        basic: {
-          title: fullTitle,
-          type: 'website',
-          image: `${SITE_URL}${image}`,
-          url: canonicalURL,
-        },
+        basic: { title: fullTitle, type: 'website', image: `${SITE_URL}${image}`, url: canonicalURL },
         optional: { description, siteName: SITE_NAME },
       }}
-      twitter={{
-        card: 'summary_large_image',
-        title: fullTitle,
-        description,
-        image: `${SITE_URL}${image}`,
-      }}
+      twitter={{ card: 'summary_large_image', title: fullTitle, description, image: `${SITE_URL}${image}` }}
     />
+    -->
   </head>
-  <body
-    class="min-h-screen font-sans text-md-on-background antialiased"
-    style="background-color: var(--brand-body-background);">
-    <main id="main-content" class="flex min-h-screen flex-col items-center">
-      <slot />
-    </main>
-
-    <style is:global>
-      @import '@fontsource-variable/inter';
-
-      html,
-      body {
-        overflow-x: hidden;
-        width: 100%;
-      }
-
-      html {
-        -webkit-text-size-adjust: 100%;
-      }
-    </style>
+  <body>
+    <slot />
   </body>
 </html>

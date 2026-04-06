@@ -1,98 +1,15 @@
 ---
-import { Icon } from 'astro-icon/components';
 import Layout from '@layouts/Layout.astro';
-import {
-  SITE_NAME,
-  SITE_TAGLINE,
-  AVATAR_PATH,
-  SOCIAL_LINKS,
-  LINK_ITEMS,
-} from '../config';
 ---
 
 <Layout>
-  <div class="flex w-full max-w-lg flex-col items-center px-4 py-12 sm:py-20">
-
-    <!-- Avatar -->
-    <div class="mb-6 h-28 w-28 overflow-hidden rounded-full border-2 border-md-outline-variant bg-md-surface-variant sm:h-32 sm:w-32">
-      <img
-        src={AVATAR_PATH}
-        alt={`${SITE_NAME} avatar`}
-        width="128"
-        height="128"
-        class="h-full w-full object-cover"
-      />
-    </div>
-
-    <!-- Name & Tagline -->
-    <h1 class="text-2xl font-bold tracking-tight text-md-on-background sm:text-3xl">
-      {SITE_NAME}
-    </h1>
-    <p class="mt-2 text-center text-sm text-md-on-surface-variant sm:text-base">
-      {SITE_TAGLINE}
-    </p>
-
-    <!-- Social Icons Row -->
-    <div class="mt-6 flex items-center gap-3">
-      {SOCIAL_LINKS.map((social) => (
-        <a
-          href={social.url}
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label={social.label}
-          class="flex h-10 w-10 items-center justify-center rounded-full bg-md-surface-variant text-md-on-surface-variant transition-colors hover:bg-md-primary hover:text-md-on-primary">
-          <Icon name={social.icon} class="h-5 w-5" />
-        </a>
-      ))}
-    </div>
-
-    <!-- Link Cards -->
-    <nav class="mt-10 flex w-full flex-col gap-3" aria-label="Links">
-      {LINK_ITEMS.map((link) => (
-        <a
-          href={link.url}
-          target="_blank"
-          rel="noopener noreferrer"
-          class="group relative flex items-center gap-4 rounded-xl border border-md-outline-variant bg-md-surface px-5 py-4 shadow-sm transition-all hover:border-md-primary hover:shadow-md">
-
-          {/* Icon */}
-          {link.icon && (
-            <div class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-md-surface-variant text-md-on-surface-variant transition-colors group-hover:bg-md-primary group-hover:text-md-on-primary">
-              <Icon name={link.icon} class="h-5 w-5" />
-            </div>
-          )}
-
-          {/* Text */}
-          <div class="min-w-0 flex-1">
-            <span class="block text-sm font-semibold text-md-on-surface sm:text-base">
-              {link.title}
-            </span>
-            {link.description && (
-              <span class="block text-xs text-md-on-surface-variant sm:text-sm">
-                {link.description}
-              </span>
-            )}
-          </div>
-
-          {/* Badge */}
-          {link.badge && (
-            <span class="rounded-full bg-md-primary px-2.5 py-0.5 text-xs font-medium text-md-on-primary">
-              {link.badge}
-            </span>
-          )}
-
-          {/* Arrow */}
-          <Icon
-            name="carbon:chevron-right"
-            class="h-4 w-4 flex-shrink-0 text-md-outline transition-transform group-hover:translate-x-0.5 group-hover:text-md-primary"
-          />
-        </a>
-      ))}
-    </nav>
-
-    <!-- Footer -->
-    <footer class="mt-12 text-center text-xs text-md-outline">
-      <p>&copy; {new Date().getFullYear()} {SITE_NAME}</p>
-    </footer>
-  </div>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      background: #000000;
+    }
+  </style>
 </Layout>
