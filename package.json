@@ -12,6 +12,9 @@
     "clean": "rm -rf dist .astro node_modules/.astro node_modules/.cache",
     "rebuild": "bun run clean && bun run build",
     "astro": "astro",
+    "tokens:validate": "node design-tokens/validate.mjs",
+    "tokens:build": "node design-tokens/build.mjs",
+    "tokens": "bun run tokens:validate && bun run tokens:build",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "deploy:production": "bunx wrangler pages deploy dist --project-name=mishal-one-web --branch=main",
@@ -20,23 +23,24 @@
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.0",
-    "@astrojs/tailwind": "^6.0.2",
-    "@fontsource-variable/inter": "^5.2.8",
+    "@fontsource-variable/atkinson-hyperlegible-next": "^5.2.6",
+    "@fontsource/artifika": "^5.2.7",
+    "@tailwindcss/typography": "^0.5.19",
+    "@tailwindcss/vite": "^4.2.2",
     "astro": "^5.17.1",
     "astro-icon": "^1.1.5",
-    "astro-seo": "^0.8.4",
     "sharp": "^0.34.5",
+    "tailwindcss": "^4.2.2",
     "typescript": "^5.9.3"
   },
   "devDependencies": {
     "@iconify-json/carbon": "^1.2.18",
     "@iconify-json/mdi": "^1.2.3",
-    "@tailwindcss/typography": "^0.5.19",
     "astro-compress": "^2.3.9",
     "prettier": "^3.8.1",
     "prettier-plugin-astro": "^0.14.1",
     "prettier-plugin-tailwindcss": "^0.7.2",
-    "tailwindcss": "^3.4.19",
+    "style-dictionary": "^5.4.0",
     "wrangler": "^4.63.0"
   }
 }

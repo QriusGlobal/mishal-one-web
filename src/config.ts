@@ -33,9 +33,9 @@ export interface SocialLink {
 }
 
 export const SOCIAL_LINKS: SocialLink[] = [
+  { label: 'X', url: 'https://x.com/mishalqrius', icon: 'carbon:logo-x' },
+  { label: 'GitHub', url: 'https://github.com/QriusGlobal', icon: 'carbon:logo-github' },
   { label: 'LinkedIn', url: 'https://linkedin.com/in/PLACEHOLDER', icon: 'carbon:logo-linkedin' },
-  { label: 'Twitter / X', url: 'https://x.com/PLACEHOLDER', icon: 'carbon:logo-x' },
-  { label: 'GitHub', url: 'https://github.com/PLACEHOLDER', icon: 'carbon:logo-github' },
   { label: 'Email', url: 'mailto:hello@mishal.one', icon: 'carbon:email' },
 ];
 

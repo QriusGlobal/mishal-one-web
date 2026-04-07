@@ -1,0 +1,33 @@
+---
+/**
+ * Header — Simple site navigation.
+ * Monogram placeholder until logo is designed.
+ */
+
+import { SITE_NAME } from '../config';
+
+const navLinks = [
+  { label: 'Blog', href: '/blog' },
+];
+---
+
+<header class="border-b border-outline-variant">
+  <nav class="mx-auto flex max-w-2xl items-center justify-between px-6 py-4">
+    <a href="/" class="font-display text-xl font-bold text-primary" aria-label={SITE_NAME}>
+      {SITE_NAME.charAt(0).toLowerCase()}
+    </a>
+
+    <ul class="flex items-center gap-6">
+      {navLinks.map(({ label, href }) => (
+        <li>
+          <a
+            href={href}
+            class="text-sm font-medium text-on-surface-variant transition-colors hover:text-primary"
+          >
+            {label}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </nav>
+</header>

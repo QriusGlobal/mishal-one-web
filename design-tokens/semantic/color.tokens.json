@@ -1,0 +1,38 @@
+{
+  "color": {
+    "$type": "color",
+    "$description": "Semantic color roles — light mode defaults. Components consume these, never primitives.",
+
+    "primary":              { "$value": "{color.navy.700}",  "$description": "Regal Navy — brand identity" },
+    "on-primary":           { "$value": "{color.white}",     "$description": "White text on navy" },
+    "primary-container":    { "$value": "{color.navy.100}",  "$description": "Pale Sky — light navy bg" },
+    "on-primary-container": { "$value": "{color.navy.900}",  "$description": "Prussian Blue on Pale Sky" },
+
+    "secondary":              { "$value": "{color.teal.900}",  "$description": "Pine Teal — supporting accent" },
+    "on-secondary":           { "$value": "{color.white}",     "$description": "White text on teal" },
+    "secondary-container":    { "$value": "{color.teal.100}",  "$description": "Pale teal bg" },
+    "on-secondary-container": { "$value": "{color.teal.900}",  "$description": "Deep teal on pale teal" },
+
+    "accent":           { "$value": "{color.gold.500}", "$description": "Yellow — CTA / primary action" },
+    "on-accent":        { "$value": "{color.black}",    "$description": "Black text on yellow" },
+    "accent-highlight": { "$value": "{color.gold.400}", "$description": "Gold — hover state" },
+
+    "background":    { "$value": "{color.white}",       "$description": "White — page background" },
+    "on-background": { "$value": "{color.black}",       "$description": "Black — body text" },
+
+    "surface":            { "$value": "{color.white}",       "$description": "White — card surfaces" },
+    "on-surface":         { "$value": "{color.black}",       "$description": "Black — text on cards" },
+    "surface-variant":    { "$value": "{color.neutral.100}", "$description": "Light grey — section bg" },
+    "on-surface-variant": { "$value": "{color.navy.700}",   "$description": "Navy — secondary text" },
+    "surface-muted":      { "$value": "{color.neutral.200}", "$description": "Alabaster — muted sections" },
+
+    "outline":         { "$value": "{color.navy.100}",  "$description": "Pale Sky — borders" },
+    "outline-variant": { "$value": "{color.neutral.200}", "$description": "Alabaster — subtle dividers" },
+
+    "error":    { "$value": "{color.coral.500}", "$description": "Coral — error / destructive" },
+    "on-error": { "$value": "{color.black}",     "$description": "Black on coral" },
+    "success":  { "$value": "{color.teal.700}",  "$description": "Teal for success states" },
+    "warning":  { "$value": "{color.gold.500}",  "$description": "Yellow for warnings" },
+    "info":     { "$value": "{color.navy.100}",  "$description": "Pale Sky for info" }
+  }
+}

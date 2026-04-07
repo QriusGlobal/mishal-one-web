@@ -1,5 +1,5 @@
-// import sitemap from '@astrojs/sitemap'; // Uncomment when noindex is removed
-import tailwind from '@astrojs/tailwind';
+import sitemap from '@astrojs/sitemap';
+import tailwindcss from '@tailwindcss/vite';
 import compress from 'astro-compress';
 import icon from 'astro-icon';
 import { defineConfig } from 'astro/config';
@@ -15,7 +15,6 @@ export default defineConfig({
     },
   },
   integrations: [
-    tailwind(),
     compress({
       CSS: {
         csso: { restructure: true, forceMediaMerge: true, comments: false },
@@ -46,7 +45,9 @@ export default defineConfig({
       },
       Image: false,
     }),
-    // sitemap(), // Uncomment when noindex is removed
+    sitemap({
+      filter: (page) => !page.includes('/404'),
+    }),
     icon({
       svgoOptions: {
         plugins: [
@@ -58,6 +59,7 @@ export default defineConfig({
   ],
   server: { port: 4322, host: true },
   vite: {
+    plugins: [tailwindcss()],
     resolve: {
       alias: {
         '@/': fileURLToPath(new URL('./src/', import.meta.url)),

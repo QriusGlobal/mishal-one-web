@@ -1,0 +1,17 @@
+# Mishal
+
+> Personal site of Mishal — builder, thinker, operator.
+> Essays on technology, systems thinking, and building in public.
+
+## Pages
+
+- [Home](https://mishal.one/) — Links to social profiles and projects
+- [Blog](https://mishal.one/blog) — Essays and technical writing
+
+## About
+
+- Mishal is a solo technical operator based in Australia
+- Focus areas: AI systems, content infrastructure, autonomous workflows
+- X/Twitter: https://x.com/mishalqrius
+- GitHub: https://github.com/QriusGlobal
+- Contact: hello@mishal.one

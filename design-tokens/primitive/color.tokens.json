@@ -1,0 +1,49 @@
+{
+  "color": {
+    "$type": "color",
+    "$description": "Brand color palette — mishal.one. Raw values, never use directly in components.",
+    "black": { "$value": "#000000" },
+    "white": { "$value": "#ffffff" },
+    "navy": {
+      "$description": "Primary brand family — Prussian Blue to Regal Navy",
+      "900": { "$value": "#001d3d", "$description": "Prussian Blue — darkest navy" },
+      "700": { "$value": "#003566", "$description": "Regal Navy — primary brand" },
+      "500": { "$value": "#0054ad", "$description": "Mid navy — derived +25% tint" },
+      "300": { "$value": "#3388cc", "$description": "Light navy — derived +50% tint" },
+      "100": { "$value": "#b3cde0", "$description": "Pale Sky — lightest blue" }
+    },
+    "gold": {
+      "$description": "Accent warm family — Yellow to Gold",
+      "500": { "$value": "#ffc300", "$description": "School Bus Yellow — primary CTA" },
+      "400": { "$value": "#ffd60a", "$description": "Gold — highlight / hover" },
+      "300": { "$value": "#ffe066", "$description": "Light gold — derived tint" },
+      "200": { "$value": "#fff0b3", "$description": "Pale gold — subtle warm bg" }
+    },
+    "teal": {
+      "$description": "Secondary accent — Pine Teal",
+      "900": { "$value": "#004d40", "$description": "Pine Teal — deep" },
+      "700": { "$value": "#00695c", "$description": "Mid teal — derived tint" },
+      "300": { "$value": "#4db6ac", "$description": "Light teal — derived tint" },
+      "100": { "$value": "#b2dfdb", "$description": "Pale teal — subtle bg" }
+    },
+    "coral": {
+      "$description": "Signal color — error / destructive only",
+      "500": { "$value": "#ff6f61", "$description": "Vibrant Coral — primary signal" },
+      "300": { "$value": "#ff9a8f", "$description": "Light coral — subtle warning bg" },
+      "100": { "$value": "#ffe0db", "$description": "Pale coral — error container" }
+    },
+    "neutral": {
+      "$description": "Neutral grey scale",
+      "50":  { "$value": "#fafafa" },
+      "100": { "$value": "#f5f5f5" },
+      "200": { "$value": "#e5e5e5", "$description": "Alabaster Grey" },
+      "300": { "$value": "#d4d4d4" },
+      "400": { "$value": "#a3a3a3" },
+      "500": { "$value": "#737373" },
+      "600": { "$value": "#525252" },
+      "700": { "$value": "#404040" },
+      "800": { "$value": "#262626" },
+      "900": { "$value": "#171717" }
+    }
+  }
+}

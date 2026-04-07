@@ -1,0 +1,49 @@
+---
+/**
+ * BaseLayout — HTML shell for every page.
+ *
+ * Wraps: BaseHead (SEO/AEO) + Header + <slot /> + Footer.
+ * All pages should use this or a layout that extends it.
+ */
+
+import BaseHead from '@components/BaseHead.astro';
+import Header from '@components/Header.astro';
+import Footer from '@components/Footer.astro';
+import '../styles/global.css';
+
+export interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+  type?: 'website' | 'article';
+  noindex?: boolean;
+  publishDate?: string;
+  updateDate?: string;
+}
+
+const { title, description, image, type, noindex, publishDate, updateDate } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead
+      title={title}
+      description={description}
+      image={image}
+      type={type}
+      noindex={noindex}
+      publishDate={publishDate}
+      updateDate={updateDate}
+    />
+  </head>
+  <body class="flex min-h-screen flex-col bg-background font-body text-on-background">
+    <Header />
+
+    <main class="flex-1">
+      <slot />
+    </main>
+
+    <Footer />
+  </body>
+</html>

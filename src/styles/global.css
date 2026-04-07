@@ -1,0 +1,88 @@
+/*
+ * Global Stylesheet — mishal.one
+ *
+ * Order matters:
+ * 1. Tailwind base + utilities
+ * 2. Generated design tokens (@theme block)
+ * 3. Font imports
+ * 4. Base styles and dark mode
+ */
+
+@import 'tailwindcss';
+@import './tokens.generated.css';
+
+/* ===== Font imports ===== */
+@import '@fontsource/artifika';
+@import '@fontsource-variable/atkinson-hyperlegible-next';
+
+/* ===== Base layer: global defaults ===== */
+@layer base {
+  html {
+    font-family: var(--font-body);
+    color: var(--color-on-background);
+    background-color: var(--color-background);
+    line-height: var(--leading-normal);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Headings use display font */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+  }
+
+  /* Accessibility */
+  :focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+  }
+
+  :focus:not(:focus-visible) {
+    outline: none;
+  }
+}
+
+/* ===== Dark mode overrides ===== */
+/* Semantic tokens shift: Navy becomes background, Gold becomes primary */
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Backgrounds → deep navy */
+    --color-background: #001d3d;
+    --color-on-background: #e5e5e5;
+
+    /* Surfaces → navy shades */
+    --color-surface: #003566;
+    --color-on-surface: #e5e5e5;
+    --color-surface-variant: #001d3d;
+    --color-on-surface-variant: #b3cde0;
+    --color-surface-muted: #001d3d;
+
+    /* Primary flips → Gold on dark */
+    --color-primary: #ffd60a;
+    --color-on-primary: #000000;
+    --color-primary-container: #001d3d;
+    --color-on-primary-container: #ffd60a;
+
+    /* Secondary stays teal, lightens for visibility */
+    --color-secondary: #4db6ac;
+    --color-on-secondary: #000000;
+    --color-secondary-container: #004d40;
+    --color-on-secondary-container: #b2dfdb;
+
+    /* Accent stays yellow — works on all backgrounds */
+    --color-accent: #ffc300;
+    --color-on-accent: #000000;
+    --color-accent-highlight: #ffd60a;
+
+    /* Borders → navy on dark */
+    --color-outline: #003566;
+    --color-outline-variant: #001d3d;
+
+    /* Feedback colors lighten for dark bg */
+    --color-error: #ff9a8f;
+    --color-on-error: #000000;
+    --color-success: #4db6ac;
+    --color-warning: #ffe066;
+    --color-info: #b3cde0;
+  }
+}

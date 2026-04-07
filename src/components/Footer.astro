@@ -1,0 +1,33 @@
+---
+/**
+ * Footer — Copyright and social links.
+ */
+
+import { SITE_NAME, SOCIAL_LINKS } from '../config';
+
+const year = new Date().getFullYear();
+---
+
+<footer class="border-t border-outline-variant mt-auto">
+  <div class="mx-auto flex max-w-2xl flex-col items-center gap-4 px-6 py-8">
+    <!-- Social icons -->
+    <div class="flex gap-4">
+      {SOCIAL_LINKS.map(({ label, url }) => (
+        <a
+          href={url}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-sm text-on-surface-variant transition-colors hover:text-primary"
+          aria-label={label}
+        >
+          {label}
+        </a>
+      ))}
+    </div>
+
+    <!-- Copyright -->
+    <p class="text-xs text-neutral-500">
+      &copy; {year} {SITE_NAME}. All rights reserved.
+    </p>
+  </div>
+</footer>

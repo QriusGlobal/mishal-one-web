@@ -1,0 +1,24 @@
+---
+/**
+ * StructuredData — Reusable JSON-LD schema component.
+ *
+ * Usage:
+ *   <StructuredData type="Person" data={{ name: 'Mishal', ... }} />
+ *   <StructuredData type="BlogPosting" data={articleData} />
+ */
+
+export interface Props {
+  type: string;
+  data: Record<string, unknown>;
+}
+
+const { type, data } = Astro.props;
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': type,
+  ...data,
+};
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(schema)} />

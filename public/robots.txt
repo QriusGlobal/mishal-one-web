@@ -1,3 +1,23 @@
+# mishal.one — Robot directives
+
+# Search-focused AI bots (allow — these cite your content)
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+# Standard search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# All other bots
 User-agent: *
 Allow: /
 
