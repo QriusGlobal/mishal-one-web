@@ -5,10 +5,12 @@
  * Designed to work identically in light and dark mode.
  */
 
+import { Image } from 'astro:assets';
 import BaseLayout from '@layouts/BaseLayout.astro';
 import StructuredData from '@components/StructuredData.astro';
 import { Icon } from 'astro-icon/components';
 import { SITE_NAME, SITE_TAGLINE, SITE_URL, SOCIAL_LINKS, LINK_ITEMS } from '../config';
+import profileImage from '@assets/images/mish-profile.jpg';
 
 const personSchema = {
   name: SITE_NAME,
@@ -32,14 +34,16 @@ const socialIcons: Record<string, string> = {
   <div class="min-h-screen bg-navy-900">
     <div class="mx-auto flex max-w-md flex-col items-center px-6 py-20 text-center">
 
-      <!-- Avatar monogram -->
+      <!-- Profile photo -->
       <div class="relative">
-        <div
-          class="flex h-28 w-28 items-center justify-center rounded-full bg-gold-500 font-display text-5xl font-bold text-navy-900"
-          aria-label="Avatar"
-        >
-          {SITE_NAME.charAt(0).toLowerCase()}
-        </div>
+        <Image
+          src={profileImage}
+          alt={SITE_NAME}
+          width={112}
+          height={112}
+          class="h-28 w-28 rounded-full border-4 border-gold-500 object-cover"
+          loading="eager"
+        />
       </div>
 
       <!-- Name & tagline -->

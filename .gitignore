@@ -24,8 +24,5 @@ Thumbs.db
 .idea/
 *.swp
 
-# IBR reference project build artifacts
-ibr-web/dist/
-ibr-web/node_modules/
-ibr-web/.astro/
-ibr-web/.wrangler/
+# IBR reference project — separate repo, does not belong here
+ibr-web/
