@@ -9,6 +9,7 @@ dist/
 # Environment
 .env
 .env.*
+.envrc
 .dev.vars
 
 # Wrangler

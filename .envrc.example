@@ -1,5 +1,9 @@
 # mishal-one-web — all secrets pulled from BWS at runtime
 # Requires: bws CLI, macOS Keychain entry "bws-access-token", direnv
+#
+# Setup:
+#   cp .envrc.example .envrc
+#   direnv allow .
 
 export BWS_ACCESS_TOKEN="${BWS_ACCESS_TOKEN:-$(security find-generic-password -s "bws-access-token" -w)}"
 
