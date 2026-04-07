@@ -1,29 +1,33 @@
 ---
 /**
  * Header — Simple site navigation.
- * Monogram placeholder until logo is designed.
+ * Uses Navy palette directly so it works on any page background.
  */
 
 import { SITE_NAME } from '../config';
+import { Icon } from 'astro-icon/components';
 
 const navLinks = [
-  { label: 'Blog', href: '/blog' },
+  { label: 'Blog', href: '/blog', icon: 'lucide:pen-line' },
 ];
 ---
 
-<header class="border-b border-outline-variant">
-  <nav class="mx-auto flex max-w-2xl items-center justify-between px-6 py-4">
-    <a href="/" class="font-display text-xl font-bold text-primary" aria-label={SITE_NAME}>
-      {SITE_NAME.charAt(0).toLowerCase()}
+<header class="bg-navy-900 border-b border-navy-700">
+  <nav class="mx-auto flex max-w-2xl items-center justify-between px-6 py-3">
+    <a href="/" class="flex items-center gap-2" aria-label={SITE_NAME}>
+      <span class="flex h-8 w-8 items-center justify-center rounded-md bg-gold-500 font-display text-sm font-bold text-navy-900">
+        {SITE_NAME.charAt(0).toLowerCase()}
+      </span>
     </a>
 
     <ul class="flex items-center gap-6">
-      {navLinks.map(({ label, href }) => (
+      {navLinks.map(({ label, href, icon }) => (
         <li>
           <a
             href={href}
-            class="text-sm font-medium text-on-surface-variant transition-colors hover:text-primary"
+            class="flex items-center gap-1.5 text-sm font-medium text-navy-100 transition-colors hover:text-gold-500"
           >
+            <Icon name={icon} class="h-4 w-4" />
             {label}
           </a>
         </li>

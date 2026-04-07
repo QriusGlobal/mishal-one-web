@@ -34,8 +34,7 @@
     "typescript": "^5.9.3"
   },
   "devDependencies": {
-    "@iconify-json/carbon": "^1.2.18",
-    "@iconify-json/mdi": "^1.2.3",
+    "@iconify-json/lucide": "^1.2.101",
     "astro-compress": "^2.3.9",
     "prettier": "^3.8.1",
     "prettier-plugin-astro": "^0.14.1",

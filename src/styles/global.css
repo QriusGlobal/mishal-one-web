@@ -48,30 +48,30 @@
   :root {
     /* Backgrounds → deep navy */
     --color-background: #001d3d;
-    --color-on-background: #e5e5e5;
+    --color-on-background: #e0e0e0;
 
     /* Surfaces → navy shades */
     --color-surface: #003566;
-    --color-on-surface: #e5e5e5;
+    --color-on-surface: #e0e0e0;
     --color-surface-variant: #001d3d;
     --color-on-surface-variant: #b3cde0;
     --color-surface-muted: #001d3d;
 
     /* Primary flips → Gold on dark */
     --color-primary: #ffd60a;
-    --color-on-primary: #000000;
+    --color-on-primary: #000814;
     --color-primary-container: #001d3d;
     --color-on-primary-container: #ffd60a;
 
     /* Secondary stays teal, lightens for visibility */
     --color-secondary: #4db6ac;
-    --color-on-secondary: #000000;
+    --color-on-secondary: #000814;
     --color-secondary-container: #004d40;
     --color-on-secondary-container: #b2dfdb;
 
     /* Accent stays yellow — works on all backgrounds */
     --color-accent: #ffc300;
-    --color-on-accent: #000000;
+    --color-on-accent: #000814;
     --color-accent-highlight: #ffd60a;
 
     /* Borders → navy on dark */
@@ -80,7 +80,7 @@
 
     /* Feedback colors lighten for dark bg */
     --color-error: #ff9a8f;
-    --color-on-error: #000000;
+    --color-on-error: #000814;
     --color-success: #4db6ac;
     --color-warning: #ffe066;
     --color-info: #b3cde0;

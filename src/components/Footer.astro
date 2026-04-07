@@ -1,33 +1,44 @@
 ---
 /**
- * Footer — Copyright and social links.
+ * Footer — Social icons and copyright.
+ * Navy palette, Gold hover accents.
  */
 
 import { SITE_NAME, SOCIAL_LINKS } from '../config';
+import { Icon } from 'astro-icon/components';
 
 const year = new Date().getFullYear();
+
+const socialIcons: Record<string, string> = {
+  'X': 'lucide:twitter',
+  'GitHub': 'lucide:github',
+  'Qrius GitHub': 'lucide:building-2',
+  'LinkedIn': 'lucide:linkedin',
+  'Email': 'lucide:mail',
+};
 ---
 
-<footer class="border-t border-outline-variant mt-auto">
+<footer class="bg-navy-900 border-t border-navy-700 mt-auto">
   <div class="mx-auto flex max-w-2xl flex-col items-center gap-4 px-6 py-8">
-    <!-- Social icons -->
-    <div class="flex gap-4">
+    <div class="flex gap-5">
       {SOCIAL_LINKS.map(({ label, url }) => (
         <a
           href={url}
           target="_blank"
           rel="noopener noreferrer"
-          class="text-sm text-on-surface-variant transition-colors hover:text-primary"
+          class="text-navy-300 transition-colors hover:text-gold-500"
           aria-label={label}
         >
-          {label}
+          {socialIcons[label]
+            ? <Icon name={socialIcons[label]} class="h-5 w-5" />
+            : <span class="text-sm">{label}</span>
+          }
         </a>
       ))}
     </div>
 
-    <!-- Copyright -->
-    <p class="text-xs text-neutral-500">
-      &copy; {year} {SITE_NAME}. All rights reserved.
+    <p class="text-xs text-navy-500">
+      &copy; {year} {SITE_NAME}
     </p>
   </div>
 </footer>

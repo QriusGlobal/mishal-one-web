@@ -34,7 +34,8 @@ export interface SocialLink {
 
 export const SOCIAL_LINKS: SocialLink[] = [
   { label: 'X', url: 'https://x.com/mishalqrius', icon: 'carbon:logo-x' },
-  { label: 'GitHub', url: 'https://github.com/QriusGlobal', icon: 'carbon:logo-github' },
+  { label: 'GitHub', url: 'https://github.com/mishaal79', icon: 'carbon:logo-github' },
+  { label: 'Qrius GitHub', url: 'https://github.com/QriusGlobal', icon: 'carbon:logo-github' },
   { label: 'LinkedIn', url: 'https://linkedin.com/in/PLACEHOLDER', icon: 'carbon:logo-linkedin' },
   { label: 'Email', url: 'mailto:hello@mishal.one', icon: 'carbon:email' },
 ];
@@ -54,34 +55,9 @@ export interface LinkItem {
 export const LINK_ITEMS: LinkItem[] = [
   {
     title: 'Writing',
-    description: 'Thought leadership and essays',
-    url: 'https://PLACEHOLDER.com/blog',
-    icon: 'carbon:pen',
-  },
-  {
-    title: 'Projects',
-    description: 'Things I\'m building',
-    url: 'https://PLACEHOLDER.com/projects',
-    icon: 'carbon:code',
-  },
-  {
-    title: 'Newsletter',
-    description: 'Subscribe for updates',
-    url: 'https://PLACEHOLDER.com/newsletter',
-    icon: 'carbon:email-new',
-    badge: 'Subscribe',
-  },
-  {
-    title: 'Speaking',
-    description: 'Talks and presentations',
-    url: 'https://PLACEHOLDER.com/speaking',
-    icon: 'carbon:microphone',
-  },
-  {
-    title: 'Resume / CV',
-    description: 'Professional background',
-    url: 'https://PLACEHOLDER.com/cv',
-    icon: 'carbon:document',
+    description: 'Essays and thinking out loud',
+    url: '/blog',
+    icon: 'lucide:pen-line',
   },
 ];
 
