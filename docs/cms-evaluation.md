@@ -5,6 +5,15 @@
 **Companion docs**:
 - `docs/cms-feature-matrix.md` — Vendor-agnostic 127-feature checklist (MUST/NICE/FUTURE)
 - `docs/wordpress-feature-inventory.md` — Full WordPress plugin ecosystem inventory
+- `docs/go-high-level-integration.md` — GHL CRM integration patterns, API, pricing
+- `docs/website-signals.md` — David Baker's 13 signals mapped to CMS requirements
+
+**Astro official CMS setup guides** (verified):
+- Payload: https://docs.astro.build/en/guides/cms/payload/
+- Sanity: https://docs.astro.build/en/guides/cms/sanity/
+- Strapi: https://docs.astro.build/en/guides/cms/strapi/
+- Storyblok: https://docs.astro.build/en/guides/cms/storyblok/
+- WordPress (headless): https://docs.astro.build/en/guides/cms/wordpress/
 
 ---
 

@@ -36,10 +36,9 @@ export default defineConfig({
       SVG: {
         svgo: {
           plugins: [
-            {
-              name: 'preset-default',
-              params: { overrides: { removeViewBox: false, removeTitle: false } },
-            },
+            'preset-default',
+            { name: 'removeViewBox', active: false },
+            { name: 'removeTitle', active: false },
           ],
         },
       },
